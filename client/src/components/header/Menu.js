@@ -5,6 +5,7 @@ import { logout } from '../../redux/actions/authAction'
 import { GLOBALTYPES } from '../../redux/actions/globalTypes'
 import Avatar from '../Avatar'
 import NotifyModal from '../NotifyModal'
+import "../../styles/menu.css"
 
 const Menu = () => {
     const navLinks = [
@@ -22,7 +23,7 @@ const Menu = () => {
     }
 
     return (
-        <div className="menu">
+        <div className="menu circleBehind">
             <ul className="navbar-nav flex-row">
                 {
                     navLinks.map((link, index) => (
