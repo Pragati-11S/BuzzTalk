@@ -15,7 +15,7 @@ const RightSideBar = () => {
             <UserCard user={auth.user} />
 
             <div className="d-flex justify-content-between align-items-center my-2">
-                <h5 className="text-danger">Suggestions for you</h5>
+                <h5 style={{color: "spanish grey"}}>Suggestions for you</h5>
                 {
                     !suggestions.loading &&
                     <i className="fas fa-redo" style={{cursor: 'pointer'}}

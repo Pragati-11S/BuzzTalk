@@ -1,5 +1,8 @@
+import { size } from 'lodash'
 import React from 'react'
 import LeftSide from '../../components/message/LeftSide'
+import Buzztalk from '../../images/Buzztalk.png'
+
 
 const Message = () => {
     return (
@@ -12,8 +15,13 @@ const Message = () => {
                 <div className="d-flex justify-content-center 
                 align-items-center flex-column h-100">
 
-                    <i className="fab fa-facebook-messenger text-primary"
-                    style={{fontSize: '5rem'}} />
+                    {/*<i className="fab fa-facebook-messenger text-primary"
+                    style={{fontSize: '5rem'}} />*/}
+                     <img className="Buzztalk"  style={{width: "300px" , height:"150px" , 
+
+                   
+                    
+                    }} src={Buzztalk} alt="Buzztalk"  />
                     <h4>Messenger</h4>
 
                 </div>
