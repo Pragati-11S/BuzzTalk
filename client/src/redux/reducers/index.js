@@ -13,7 +13,6 @@ import socket from './socketReducer'
 import notify from './notifyReducer'
 import message from './messageReducer'
 import online from './onlineReducer'
-import call from './callReducer'
 import peer from './peerReducer'
 
 
@@ -32,6 +31,5 @@ export default combineReducers({
     notify,
     message,
     online,
-    call,
     peer
 })

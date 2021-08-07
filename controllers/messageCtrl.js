@@ -19,9 +19,9 @@ class APIfeatures {
 const messageCtrl = {
     createMessage: async (req, res) => {
         try {
-            const { sender, recipient, text, media, call } = req.body
+            const { sender, recipient, text, media} = req.body
 
-            if(!recipient || (!text.trim() && media.length === 0 && !call)) return;
+            if(!recipient || (!text.trim() && media.length === 0)) return;
 
             const newConversation = await Conversations.findOneAndUpdate({
                 $or: [
@@ -30,12 +30,12 @@ const messageCtrl = {
                 ]
             }, {
                 recipients: [sender, recipient],
-                text, media, call
+                text, media
             }, { new: true, upsert: true })
 
             const newMessage = new Messages({
                 conversation: newConversation._id,
-                sender, call,
+                sender,
                 recipient, text, media
             })
 

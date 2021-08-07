@@ -26,16 +26,6 @@ const UserCard = ({children, user, border, handleClose, setShowFollowers, setSho
                     </div>
                 }
 
-                {
-                    user.call &&
-                    <span className="material-icons">
-                        {
-                            user.call.times === 0
-                            ? user.call.video ? 'videocam_off' : 'phone_disabled'
-                            : user.call.video ? 'video_camera_front' : 'call'
-                        }
-                    </span>
-                }
             </>
         )
     }

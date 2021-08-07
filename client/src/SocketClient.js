@@ -5,7 +5,6 @@ import { GLOBALTYPES } from './redux/actions/globalTypes'
 import { NOTIFY_TYPES } from './redux/actions/notifyAction'
 import { MESS_TYPES } from './redux/actions/messageAction'
 
-import audiobell from './audio/got-it-done-613.mp3'
 
 
 const spawnNotification = (body, icon, url, title) => {
@@ -21,7 +20,7 @@ const spawnNotification = (body, icon, url, title) => {
 }
 
 const SocketClient = () => {
-    const { auth, socket, notify, online, call } = useSelector(state => state)
+    const { auth, socket, notify, online } = useSelector(state => state)
     const dispatch = useDispatch()
 
     const audioRef = useRef()
@@ -166,30 +165,9 @@ const SocketClient = () => {
     },[socket, dispatch])
 
 
-    // Call User
-    useEffect(() => {
-        socket.on('callUserToClient', data =>{
-            dispatch({type: GLOBALTYPES.CALL, payload: data})
-        })
-
-        return () => socket.off('callUserToClient')
-    },[socket, dispatch])
-
-    useEffect(() => {
-        socket.on('userBusy', data =>{
-            dispatch({type: GLOBALTYPES.ALERT, payload: {error: `${call.username} is busy!`}})
-        })
-
-        return () => socket.off('userBusy')
-    },[socket, dispatch, call])
-
-
 
     return (
         <>
-            <audio controls ref={audioRef} style={{display: 'none'}} >
-                <source src={audiobell} type="audio/mp3" />
-            </audio>
         </>
     )
 }
