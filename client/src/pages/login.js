@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { login } from '../redux/actions/authAction'
 import { useDispatch, useSelector } from 'react-redux'
-
+import '../styles/auth.css'
+import Buzztalkk from '../images/Buzztalkk.jpeg'
 
 const Login = () => {
     const initialState = { email: '', password: '' }
@@ -30,17 +31,14 @@ const Login = () => {
     }
 
     return (
-        <div className="auth_page">
+        <div className="auth_page" style={{marginLeft: "-40px"}}>
             <form onSubmit={handleSubmit}>
-
+            <img className="Buzztalkk" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
+    height: "20%", marginLeft: "50px", marginTop: "-30px", marginBottom: "10px"}} />
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" name="email"
                     aria-describedby="emailHelp" onChange={handleChangeInput} value={email} />
-                    
-                    <small id="emailHelp" className="form-text text-muted">
-                        We'll never share your email with anyone else.
-                    </small>
                 </div>
 
                 <div className="form-group">

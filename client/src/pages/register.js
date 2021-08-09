@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, Link } from 'react-router-dom'
 import { register } from '../redux/actions/authAction'
+import Buzztalkk from '../images/Buzztalkk.jpeg'
 
 const Register = () => {
     const { auth, alert } = useSelector(state => state)
@@ -33,10 +34,10 @@ const Register = () => {
     }
 
     return (
-        <div className="auth_page">
+        <div className="auth_page" style={{marginLeft: "-40px"}}>
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">BuzzTalk</h3>
-
+            <img className="Buzztalkk" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
+    height: "20%", marginLeft: "50px", marginTop: "-50px", marginBottom: "10px"}} />
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
                     <input type="text" className="form-control" id="fullname" name="fullname"
