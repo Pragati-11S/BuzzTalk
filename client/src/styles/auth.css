@@ -1,19 +1,41 @@
 .auth_page{
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
     min-height: 100vh;
     background: #fdfdfd;
     display: flex;
     align-items: center;
+    margin-left: 230px;
     justify-content: center;
+    background:url('../images/header.gif') repeat-x 100% fixed;
 }
+
 .auth_page form{
     background: #fff;
     max-width: 400px;
     width: 100%;
+    border-radius: 12px;
+    margin-left: 600px;
     border: 1px solid #ddd;
     padding: 50px 25px;
+    animation-name : ease-out;
+    animation-duration : 1s;
 }
-
+@keyframes ease-out {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
+}
 .auth_page form .pass{
     position: relative;
 }
@@ -26,3 +48,4 @@
     cursor: pointer;
     opacity: 0.5;
 }
+
