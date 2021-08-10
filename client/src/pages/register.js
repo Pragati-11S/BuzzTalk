@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, Link } from 'react-router-dom'
 import { register } from '../redux/actions/authAction'
 import Buzztalkk from '../images/Buzztalkk.jpeg'
+import "../styles/auth.css"
+
 
 const Register = () => {
     const { auth, alert } = useSelector(state => state)
@@ -34,9 +36,15 @@ const Register = () => {
     }
 
     return (
-        <div className="auth_page" style={{marginLeft: "-40px"}}>
+
+
+      <div id ="card1" >
+     <div id="card-content1">
+    
+      <div id="card-title1">
+             
             <form onSubmit={handleSubmit}>
-            <img className="Buzztalkk" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
+            <img className="Buzztalkk1" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
     height: "20%", marginLeft: "50px", marginTop: "-50px", marginBottom: "10px"}} />
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
@@ -82,7 +90,7 @@ const Register = () => {
                         style={{background: `${alert.password ? '#fd2d6a14' : ''}`}} />
 
                         <small onClick={() => setTypePass(!typePass)}>
-                            {typePass ? 'Hide' : 'Show'}
+                         
                         </small>
                     </div>
 
@@ -102,7 +110,7 @@ const Register = () => {
                         style={{background: `${alert.cf_password ? '#fd2d6a14' : ''}`}} />
 
                         <small onClick={() => setTypeCfPass(!typeCfPass)}>
-                            {typeCfPass ? 'Hide' : 'Show'}
+                            
                         </small>
                     </div>
 
@@ -111,25 +119,10 @@ const Register = () => {
                     </small>
                 </div>
 
-                <div className="row justify-content-between mx-0 mb-1">
-                    <label htmlFor="male">
-                        Male: <input type="radio" id="male" name="gender"
-                        value="male" defaultChecked onChange={handleChangeInput} />
-                    </label>
-
-                    <label htmlFor="female">
-                        Female: <input type="radio" id="female" name="gender"
-                        value="female" onChange={handleChangeInput} />
-                    </label>
-
-                    <label htmlFor="other">
-                        Other: <input type="radio" id="other" name="gender"
-                        value="other" onChange={handleChangeInput} />
-                    </label>
-                </div>
                 
-                <button type="submit" className="btn btn-dark w-100">
-                    Register
+                
+                <button  id="submit-btn" type="submit">
+                 Register
                 </button>
 
                 <p className="my-2">
@@ -137,7 +130,13 @@ const Register = () => {
                 </p>
             </form>
         </div>
+        </div>
+        </div>
+        
     )
 }
+
+
+
 
 export default Register

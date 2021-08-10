@@ -1,41 +1,64 @@
-.auth_page{
-    justify-content: center;
-    align-items: center;
-    width: 1200px;
-    min-height: 100vh;
-    background: #fdfdfd;
-    display: flex;
-    align-items: center;
-    margin-left: 230px;
-    justify-content: center;
-    background:url('../images/header.gif') repeat-x 100% fixed;
+body{
+    overflow: scroll;
+}
+.header{
+    width: 46px;
+  height: 44px;
+}
+.Buzztalkk1{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  width: 50%;
+}
+#submit-btn {
+  background: -webkit-linear-gradient(right, #A49393,#D8A7B1);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px#A49393;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+  
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #A49393;
 }
 
-.auth_page form{
-    background: #fff;
-    max-width: 400px;
-    width: 100%;
-    border-radius: 12px;
-    margin-left: 600px;
-    border: 1px solid #ddd;
-    padding: 50px 25px;
-    animation-name : ease-out;
-    animation-duration : 1s;
-}
-@keyframes ease-out {
-    from {
-        transform : scale(1);
-        opacity   : 1;
-    }
-    50% {
-        transform : scale(0.75);
-        opacity   : 0.25;
-    }
-    to {
-        transform : scale(1);
-        opacity   : 1;
-    }
-}
+#card1 {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+max-height:10%;   
+    width: 429px;
+    position:relative;  
+    top:-65px;
+  
+    
+    
+  
+  }
+  #card-content1 {
+      align-items:flex-start;
+    padding: 12px 44px;
+    
+  
+  }
+  #card-title1 {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+
 .auth_page form .pass{
     position: relative;
 }
