@@ -44,8 +44,7 @@ const Register = () => {
       <div id="card-title1">
              
             <form onSubmit={handleSubmit}>
-            <img className="Buzztalkk1" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
-    height: "20%", marginLeft: "50px", marginTop: "-50px", marginBottom: "10px"}} />
+            <img className="Buzztalkk1" src={Buzztalkk} alt="Buzztalkk"/>
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
                     <input type="text" className="form-control" id="fullname" name="fullname"

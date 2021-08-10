@@ -4,7 +4,6 @@ a {
 body {
   background:  #f4e7f0;
   background-repeat: no-repeat;
-  overflow: hidden;
   
 }
 label {
@@ -27,12 +26,12 @@ label {
   height: fit-content;
   margin: 6rem auto 8.1rem auto;
   width: 429px;
+  
 
 }
 #card-content {
     align-items:flex-start;
   padding: 12px 44px;
-
 }
 #card-title {
   font-family: "Raleway Thin", sans-serif;
@@ -67,7 +66,7 @@ label {
 }
 .header1{
     background-image: url("../images/header.gif");
-    padding-left: 500px; 
+    padding-left: 575px; 
     width: 100%;
     
     
