@@ -133,7 +133,6 @@ const RightSide = () => {
                 setIsLoadMore(1)
             }
         }
-        // eslint-disable-next-line
     },[isLoadMore])
 
     const handleDeleteConversation = () => {

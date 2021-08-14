@@ -14,10 +14,6 @@ const NotifyModal = () => {
         dispatch(isReadNotify({msg, auth}))
     }
 
-    // const handleSound = () => {
-    //     dispatch({type: NOTIFY_TYPES.UPDATE_SOUND, payload: !notify.sound})
-    // }
-
     const handleDeleteAll = () => {
         const newArr = notify.data.filter(item => item.isRead === false)
         if(newArr.length === 0) return dispatch(deleteAllNotifies(auth.token))
@@ -31,16 +27,6 @@ const NotifyModal = () => {
         <div style={{minWidth: '300px'}}>
             <div className="d-flex justify-content-between align-items-center px-3">
                 <h3>Notification</h3>
-                {/* {
-                    notify.sound 
-                    ? <i className="fas fa-bell text-danger" 
-                    style={{fontSize: '1.2rem', cursor: 'pointer'}}
-                    onClick={handleSound} />
-
-                    : <i className="fas fa-bell-slash text-danger"
-                    style={{fontSize: '1.2rem', cursor: 'pointer'}}
-                    onClick={handleSound} />
-                } */}
             </div>
             <hr className="mt-0" />
 

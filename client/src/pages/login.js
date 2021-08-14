@@ -4,7 +4,6 @@ import { login } from '../redux/actions/authAction'
 import { useDispatch, useSelector } from 'react-redux'
 import  '../styles/login.css'
 import Buzztalkk from '../images/Buzztalkk.jpeg'
-import header from '../images/header.gif'
 
 const Login = () => {
     const initialState = { email: '', password: '' }
@@ -38,10 +37,6 @@ const Login = () => {
      <div id="card-content">
     
       <div id="card-title">
-             
-             
-            
-        
           <div>
             <img className="Buzztalkk" src={Buzztalkk} alt="Buzztalkk" style={{width: "70%",
     height: "20%", marginLeft: "50px", marginTop: "-30px", marginBottom: "10px"}} /></div>
@@ -90,10 +85,7 @@ const Login = () => {
                 </div>
          
          </div>
-         </div>
-        
-     
-       
+         </div>       
     )
 }
 
